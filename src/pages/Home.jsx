@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LinkComponent } from "../components/home/LinkComponent";
 
 export const Home = () => {
   return (
@@ -10,18 +10,8 @@ export const Home = () => {
       <h1 className="tracking-widest text-3xl md:text-6xl">TICK IT</h1>
 
       <section className="flex gap-10 md:text-3xl">
-        <Link
-          to={"/signIn"}
-          className="shadow-sm shadow-black p-3 rounded-md transition-shadow hover:shadow-inner hover:shadow-black"
-        >
-          INICIAR SESIÓN
-        </Link>
-        <Link
-          to={"/signUp"}
-          className="shadow-sm shadow-black p-3 rounded-md transition-shadow hover:shadow-inner hover:shadow-black"
-        >
-          REGISTRARSE
-        </Link>
+        <LinkComponent to={"/signIn"}>INICIAR SESIÓN</LinkComponent>
+        <LinkComponent to={"/signUp"}>REGISTRARSE</LinkComponent>
       </section>
     </main>
   );
